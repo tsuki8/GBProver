@@ -1,0 +1,32 @@
+name = "GBProver"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["GBProver"]
+
+
+[leanOptions]
+pp.unicode.fun = true # pretty-prints `fun a ↦ b`
+autoImplicit = false
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "groebner"
+# git = "https://github.com/WuProver/groebner_proj.git"
+scope = "WuProver"
+# rev = "main"
+
+[[require]]
+name = "MonomialOrderedPolynomial"
+git = "https://github.com/WuProver/MonomialOrderedPolynomial.git"
+scope  = "WuProver"
+
+[[require]]
+name = "GroebnerTactic"
+git = "https://github.com/WuProver/GroebnerTactic.git"
+scope  = "WuProver"
+rev = "main"
+
+[[lean_lib]]
+name = "GBProver"
